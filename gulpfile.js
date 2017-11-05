@@ -6,5 +6,5 @@ const aglio = require('gulp-aglio');
 gulp.task('docs', () => {
   gulp.src('src/*.md')
     .pipe(aglio({template: 'default'}))
-    .pipe(gulp.dest('docs'));
+    .pipe(gulp.dest('./'));
 });
