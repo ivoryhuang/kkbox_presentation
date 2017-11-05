@@ -1,6 +1,6 @@
 FORMAT: 1A
 
-# Listen Together(v2)
+# Listen Together(v3)
 
 Allow kkbox members to view listen-together pages and follow hosts
 
