@@ -6,11 +6,11 @@ Allow kkbox members to view listen-together pages and follow hosts
 
 # Group Host
 
-## Host Collection [/host/{member_id}]
+## Host Collection [/host/{id}]
 
 + Parameters
 
-    + member_id: 8q3_xzjl89Yakn_7GB (string, required) - Unique identifier for a member
+    + id: 8q3_xzjl89Yakn_7GB (string, required) - Unique identifier for a member
 
 
 ### Get host information [GET]
@@ -281,11 +281,11 @@ Allow kkbox members to view listen-together pages and follow hosts
 + Response 204
 
 
-## Host Shared-playlists Collection [/host/{member_id}/shared-playlists]
+## Host Shared-playlists Collection [/host/{id}/shared-playlists]
 
 + Parameters
 
-    + member_id: 8q3_xzjl89Yakn_7GB (string, required) - Unique identifier for a member
+    + id: 8q3_xzjl89Yakn_7GB (string, required) - Unique identifier for a member
 
 ### Get host shared-playlists [GET]
 
@@ -364,11 +364,11 @@ Allow kkbox members to view listen-together pages and follow hosts
 		}
 
 
-## Host Recent-tracks Collection [/host/{member_id}/recent-tracks]
+## Host Recent-tracks Collection [/host/{id}/recent-tracks]
 
 + Parameters
 
-    + member_id: 8q3_xzjl89Yakn_7GB (string, required) - Unique identifier for a member
+    + id: 8q3_xzjl89Yakn_7GB (string, required) - Unique identifier for a member
 
 ### Get host recently listening tracks [GET]
 
@@ -495,12 +495,12 @@ Allow kkbox members to view listen-together pages and follow hosts
 
 		}
 
-## Follower Collection [/host/{member_id}/followers/{my_member_id}]
+## Follower Collection [/host/{id}/followers/{my_id}]
 
 + Parameters
 
-    + member_id: 8q3_xzjl89Yakn_7GB (string, required) - Unique identifier for a member
-    + my_member_id: 8q3_xzjl89Yakn_7GB (string, required) - Unique identifier for a member
+    + id: 8q3_xzjl89Yakn_7GB (string, required) - Unique identifier for a member
+    + my_id: 8q3_xzjl89Yakn_7GB (string, required) - Unique identifier for a member
 
 ### Get followers' information [GET]
 
@@ -607,7 +607,7 @@ Allow kkbox members to view listen-together pages and follow hosts
 		}
 
 
-## Following Collection [/following/{host_member_id}/{my_member_id}]
+## Following Collection [/following/{host_id}/{my_id}]
 
 ### Get following state [GET]
 
