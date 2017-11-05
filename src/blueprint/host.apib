@@ -1,8 +1,8 @@
-## Host Collection [/host/{id}]
+## Host Collection [/host/{`member_id`}]
 
 + Parameters
 
-    + id: 8q3_xzjl89Yakn_7GB (string, required) - Unique identifier for a member
+    + member_id: 8q3_xzjl89Yakn_7GB (string, required) - Unique identifier for a member
 
 
 ### Get host information [GET]
@@ -273,11 +273,11 @@
 + Response 204
 
 
-## Host Shared-playlists Collection [/host/{id}/shared-playlists]
+## Host Shared-playlists Collection [/host/{`member_id`}/shared-playlists]
 
 + Parameters
 
-    + id: 8q3_xzjl89Yakn_7GB (string, required) - Unique identifier for a member
+    + member_id: 8q3_xzjl89Yakn_7GB (string, required) - Unique identifier for a member
 
 ### Get host shared-playlists [GET]
 
@@ -356,11 +356,11 @@
 		}
 
 
-## Host Recent-tracks Collection [/host/{id}/recent-tracks]
+## Host Recent-tracks Collection [/host/{`member_id`}/recent-tracks]
 
 + Parameters
 
-    + id: 8q3_xzjl89Yakn_7GB (string, required) - Unique identifier for a member
+    + member_id: 8q3_xzjl89Yakn_7GB (string, required) - Unique identifier for a member
 
 ### Get host recently listening tracks [GET]
 
@@ -486,152 +486,3 @@
 			}
 
 		}
-
-## Follower Collection [/host/{id}/followers/{my_id}]
-
-+ Parameters
-
-    + id: 8q3_xzjl89Yakn_7GB (string, required) - Unique identifier for a member
-    + my_id: 8q3_xzjl89Yakn_7GB (string, required) - Unique identifier for a member
-
-### Get followers' information [GET]
-
-+ Response 200 (application/json)
-
-	+ Body
-
-		{
-			"data": [
-				{
-					"id": "OrZNXB5eLG7iPlkRfm",
-					"name": "張宇辰",
-					"follower_count": 5,
-					"url": "https://event.kkbox.com/content/album/OrZNXB5eLG7iPlkRfm",
-					"images": [
-						{
-							"height": 160,
-							"width": 160,
-							"url": "https://i.kfs.io/album/tw/32394,0v1/fit/160x160.jpg"
-						}
-					],
-					"is_me_following": false
-				}
-			],
-			"paging": {
-				"offset": 0,
-				"limit": 5,
-				"previous": "foo",
-				"next": "https://api.kkbox.com/v1.1/artists/CluDKLYxr1GFQqLSZt/albums?limit=5&offset=5"
-			},
-			"summary": {
-				"total": 584
-			}
-		}
-
-	+ Schema
-		{
-			"type": "object",
-			"properties": {
-				"data": {
-		            "type": "array",
-		            "items":{
-			            "type": "object",
-		                "properties": {
-		                	"id": {
-		                		"type": "string"
-		                	},
-		                	"name": {
-		                		"type": "string"
-		                	},
-					        "follower_count": {
-					            "type": "number"
-					        },
-		                	"url": {
-					            "type": "string"
-					        },
-					        "is_following": {
-					            "type": "boolean"
-					        },
-					        "images": {
-					        	"type": "array",
-					        	"items": {
-					                "type": "object",
-					                "properties": {
-					                	"height": {
-					                		"type": "number"
-					                	},
-					                	"width": {
-					                		"type": "number"
-					                	},
-					                	"url": {
-								            "type": "string"
-								        }
-					                }
-					            }
-					        }
-		                }
-		            }
-		        },
-		        "paging":{
-		        	"offset": {
-                		"type": "number"
-                	},
-                	"limit":{
-                		"type": "number"
-                	},
-                	"previous":{
-                		"type": "string"
-                	},
-                	"next":{
-                		"type": "string"
-                	}
-		        },
-		        "summary": {
-		            "type": "object",
-		            "properties":{
-		            	"total":{
-		            		"type": number
-		            	}
-		            }
-		        }
-			}
-
-		}
-
-
-## Following Collection [/following/{hostid}/{myid}]
-
-### Get following state [GET]
-
-+ Response 200 (application/json)
-
-	+ Body
-
-		{
-			"is_following": true
-		}
-
-	+ Schema
-		{
-			"type": "object",
-			"properties":{
-				"is_following":{
-					"type": "boolean"
-				}
-			}
-		}
-
-### Update following state [PUT]
-
-+ Request (application/json)
-
-	+ Attributes (object)
-        + is_following: true (boolean, required)
-
-	+ Body
-
-		{
-			"is_following": false
-		}
-
-+ Response 204
