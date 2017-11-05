@@ -4,7 +4,7 @@ const gulp = require('gulp');
 const aglio = require('gulp-aglio');
 
 gulp.task('docs', () => {
-  gulp.src('src/index.apib')
+  gulp.src('src/*.apib')
     .pipe(aglio({template: 'default'}))
     .pipe(gulp.dest('./'));
 });
