@@ -78,6 +78,33 @@
 
 			}
 
++ Response 401 (application/json)
+
+	+ Body
+
+			{
+				"code": "001",
+				"message": "Invalid Credentials"
+			}
+
++ Response 403 (application/json)
+
+	+ Body
+
+			{
+				"code": "002",
+				"message": "The user has not granted the access to the information"
+			}
+
++ Response 404 (application/json)
+
+	+ Body
+
+			{
+				"code": "003",
+				"message": "Member not found: {member_id}"
+			}
+
 
 ### Create host [POST]
 
