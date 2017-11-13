@@ -1,0 +1,24 @@
+{
+  "name": "kkbox_presentation",
+  "version": "1.0.0",
+  "description": "You can use the [editor on GitHub](https://github.com/ivoryhuang/kkbox_presentation/edit/master/README.md) to maintain and preview the content for your website in Markdown files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivoryhuang/kkbox_presentation.git"
+  },
+  "author": "ivoryhuang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ivoryhuang/kkbox_presentation/issues"
+  },
+  "homepage": "https://github.com/ivoryhuang/kkbox_presentation#readme",
+  "devDependencies": {
+    "aglio": "^2.3.0",
+    "gulp": "^3.9.1",
+    "gulp-aglio": "0.0.10"
+  }
+}

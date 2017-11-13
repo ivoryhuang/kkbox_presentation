@@ -1,0 +1,19 @@
+install:
+  npm install
+script:
+  gulp docs
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  email: $GITHUB_EMAIL
+  name: $GITHUB_NAME
+  on:
+    branch: master
+sudo: required
+language: node_js
+node_js:
+  - "6"
+notifications:
+  email:
+    - $GITHUB_EMAIL
